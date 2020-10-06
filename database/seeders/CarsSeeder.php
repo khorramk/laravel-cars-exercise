@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Cars;
+use Database\Factories\CarsFactory;
 use Illuminate\Database\Seeder;
 
 class CarsSeeder extends Seeder
@@ -16,6 +17,6 @@ class CarsSeeder extends Seeder
     {
         //
 
-        DB::table('cars')->insert($data);
+        Cars::factory()->times(5)->create();
     }
 }
