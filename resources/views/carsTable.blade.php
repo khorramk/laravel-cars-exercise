@@ -11,19 +11,19 @@
         </tr>
     </thead>
     <tbody>
-        @for ($i = 0; $i < count($cars); $i++)
+        @foreach ($cars as $car)
         <tr>
             <td>
-                {{ $cars[$i]['make'] }}
+                {{ $car['make'] }}
             </td>
             <td>
-                {{$cars[$i]['model']}}
+                {{$car['model']}}
             </td>
             <td>
-                {{$cars[$i]['colours']}}
+                {{$car['colours']}}
             </td>
             <td>
-                {{$cars[$i]['topSpeed']}}
+                {{$car['topSpeed']}}
             </td>
             <td>
                 <a href="#"> view </a>
@@ -32,10 +32,18 @@
                 <a href="edit"> edit<a>
             </td>
             <td>
-                <a href="#">delete</a>
+                <a class="btn btn-warning btn-flat" href="#" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $car['id'] }}').submit();">
+                    delete
+                </a>
+
+            <form action="api/delete/{{$car['id']}}" method="POST" id="delete-form-{{ $car['id'] }}" style="display: none;">
+                   {{csrf_field()}}
+                   {{ method_field('POST') }}
+                   <input type="hidden" value="{{ $car['id'] }}" name="id">
+              </form>
             </td>
         </tr>
-        @endfor
+        @endforeach
 
     </tbody>
 </table>
