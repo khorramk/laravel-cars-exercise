@@ -11,19 +11,19 @@
         </tr>
     </thead>
     <tbody>
-        @for ($i = 0; $i < count($cars); $i++)
+        @foreach ($cars as $car)
         <tr>
             <td>
-                {{ $cars[$i]['make'] }}
+                {{ $car['make'] }}
             </td>
             <td>
-                {{$cars[$i]['model']}}
+                {{$car['model']}}
             </td>
             <td>
-                {{$cars[$i]['colours']}}
+                {{$car['colours']}}
             </td>
             <td>
-                {{$cars[$i]['topSpeed']}}
+                {{$car['topSpeed']}}
             </td>
             <td>
                 <a href="#"> view </a>
