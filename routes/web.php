@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ShowCars::class);
+Route::get('/', ShowCars::class)->name('carsTable');
