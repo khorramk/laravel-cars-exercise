@@ -19,7 +19,8 @@ class ShowCars extends Controller
         $cars = [];
 
         foreach (Cars::all() as $key=>  $car) {
-            $cars[$key]['make'] =   $car['Make'];
+            $cars[$key]['id'] = $car->id;
+            $cars[$key]['make'] = $car['Make'];
             $cars[$key]['model'] = $car['Model'];
             $cars[$key]['colours'] = $car['Colour'];
             $cars[$key]['topSpeed'] = $car['Top speed'];
