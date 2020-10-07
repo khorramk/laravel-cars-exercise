@@ -11,7 +11,6 @@
         </tr>
     </thead>
     <tbody>
-        {{-- {{dd($cars[0]['make'])}} --}}
         @for ($i = 0; $i < count($cars); $i++)
         <tr>
             <td>
