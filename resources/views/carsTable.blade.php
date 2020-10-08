@@ -36,13 +36,13 @@
                 {{$car['colours']}}
             </td>
             <td>
-                {{$car['topSpeed']}}
+                {{$car['topSpeed']}}mph
             </td>
             <td>
                 <a href="#"> view </a>
             </td>
             <td>
-                <a href="edit"> edit<a>
+                <a href="/edit-car/{{$car['id']}}"> edit<a>
             </td>
             <td>
                 <a class="btn btn-warning btn-flat" href="#" onclick="event.preventDefault(); document.getElementById('delete-form-{{ $car['id'] }}').submit();">
