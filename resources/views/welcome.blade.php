@@ -21,6 +21,16 @@
         </style>
     </head>
     <body class="antialiased">
-        @include('carsTable')
+        <div class="container">
+            <h1 class="text-center border ">
+                Cars
+            </h1>
+
+
+
+
+     @yield('content')
+
+        </div>
     </body>
 </html>
