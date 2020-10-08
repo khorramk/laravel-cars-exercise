@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ShowCars::class)->name('carsTable');
 Route::get('/add-car', function ()
 {
-    return 'hello';
+    return view('cars-spec-form');
 });
