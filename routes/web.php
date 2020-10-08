@@ -19,3 +19,6 @@ Route::get('/add-car', function ()
 {
     return view('cars-spec-form');
 });
+Route::get('/edit-car', function () {
+    return 'edit!';
+});
