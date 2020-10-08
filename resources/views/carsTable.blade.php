@@ -39,7 +39,7 @@
                 {{$car['topSpeed']}}mph
             </td>
             <td>
-                <a href="#"> view </a>
+            <a href="/api/car/view/{{$car['id']}}"> view </a>
             </td>
             <td>
                 <a href="/edit-car/{{$car['id']}}"> edit<a>

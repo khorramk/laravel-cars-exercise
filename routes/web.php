@@ -22,3 +22,7 @@ Route::get('/add-car', function ()
 Route::get('/edit-car/{id}', function ($id) {
     return view('edit-car-form', ['id' => $id]);
 });
+
+Route::get('/car', function () {
+    return view('view-car-spec');
+})->name('carsview');
