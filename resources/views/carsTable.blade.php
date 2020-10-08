@@ -1,5 +1,18 @@
+@extends('welcome')
+@section('content')
+<div class="row">
+    <div class="col-sm-4">
+        <h5>
+            Cars table
+        </h5>
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 align-right">
+       <button class="btn btn-secondary d-block ml-auto text-black"><a href="/add-car" class="text-dark">Add new</a> </button>
+    </div>
+</div>
 <table class="table">
-    <thead>
+    <thead class="">
         <tr>
             <th scope="col">Make</th>
             <th scope="col">Model</th>
