@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AddCars;
 use App\Http\Controllers\CarsDelete;
+use App\Models\Cars;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::post('/delete/{id}', CarsDelete::class);
+Route::get('/cars/add', AddCars::class);
